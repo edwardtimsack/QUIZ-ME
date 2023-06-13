@@ -47,11 +47,13 @@ h3{
 }
 .score{
     background-color: rgb(236, 121, 54);
-    width: 92rem;
+    /* width: 92rem; */
     height: 80px;
     margin-top: 40px;
     align-content: center;
     margin-left: 30px;
+    margin-right: 30px;
+
     display: flex;
     border-radius: 10px;
     overflow-x: hidden;
@@ -79,9 +81,10 @@ hr{
 }
 section{
     /* background-color: cadetblue; */
-    width: 92rem;
+    /* width: 92rem; */
     /* display: block; */
     margin-left: 30px;
+    margin-right: 30px;
 
     margin-top: 20px;
     overflow-x: hidden;
