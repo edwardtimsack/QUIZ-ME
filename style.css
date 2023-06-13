@@ -119,13 +119,21 @@ section{
 
 
 }
-@media screen and (max-width: 428px) {
+.technology{
+    height: 80px;
+    background-color: hsl(212, 25%, 25%);
+    border: none;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 360px) {
     body{
         overflow-x: hidden;
     }
     .header{
         display: flex;
         overflow-x: hidden;
+        /* background-color: red; */
     }
     hr{
         /* color: blue; */
@@ -154,15 +162,18 @@ section{
     }
     .score{
         display: flex;
-        width: 370px;
+        width: 300px;
         /* background-color: yellowgreen; */
         border-radius: 10px;
 
     }
     .art ,
     .general-knowledge, 
-    .science{
-        width: 370px;
+    .science,
+    .technology
+    {
+        width: 300px;
+        /* width: 370px; */
         border-radius: 10px;
         overflow-x: hidden;
     }
