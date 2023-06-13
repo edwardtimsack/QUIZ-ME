@@ -132,6 +132,7 @@ section{
     }
     .header{
         display: flex;
+        justify-content: space-between;
         overflow-x: hidden;
         /* background-color: red; */
     }
@@ -142,14 +143,14 @@ section{
 
     }
     #one{
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
     }
     #one:hover{
         color: black;
     }
     #last{
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
 
     }
@@ -157,8 +158,8 @@ section{
         color: black;
     }
     h3{
-        font-size: 35px;
-        /* font-weight: 400; */
+        font-size: 30px;
+        font-weight: 300;
     }
     .score{
         display: flex;
