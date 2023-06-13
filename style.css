@@ -15,7 +15,7 @@ body{
     height: 100px;
     display: flex;
     justify-content: space-between;
-    background-color: hsl(240, 17%, 23%);
+    background-color: hsl(212, 25%, 25%);
     border-radius: 0px 0px 40px 40px;
 }
 h3{
@@ -28,28 +28,130 @@ h3{
     padding-left: 30px;
     margin-top: 20px;
     color: white;
+    cursor: pointer;
 
+}
+#one:hover{
+    color: black;
 }
 #last{
     font-size: 50px;
     padding-right: 30px;
     margin-top: 20px;
     color: white;
+    cursor: pointer;
+}
+#last:hover{
+    color: black;
+}
+.score{
+    background-color: rgb(236, 121, 54);
+    width: 92rem;
+    height: 80px;
+    margin-top: 40px;
+    align-content: center;
+    margin-left: 30px;
+    display: flex;
+    border-radius: 10px;
+}
+.left{
+    /* border-right: 5px solid white; */
+    width: 50rem;
+    height: 80px;
+    /* background-color: violet; */
+    border: none;
+}
+hr{
+    color: white;
+    font-size: 30px;
+    border-right: 3px solid white;
+    /* width: 10px; */
+    height: 50px;
+    margin-top: 15px;
+}
+.right{
+    /* border-left: 3px solid white; */
+    width: 50rem;
+    height: 80px;
+    /* background-color: rgb(50, 7, 241); */
+}
+section{
+    /* background-color: cadetblue; */
+    width: 92rem;
+    /* display: block; */
+    margin-left: 30px;
+
+    margin-top: 20px;
+    
+}
+.art{
+    /* width: 50rem; */
+    height: 80px;
+    background-color: hsl(212, 25%, 25%);
+    border: none;
+    border-radius: 10px;
+
+}
+.general-knowledge{
+    /* width: 50rem; */
+    height: 80px;
+    background-color: hsl(212, 25%, 25%);
+    border: none;
+    margin-top: 40px;
+    border-radius: 10px;
+
+}
+.science{
+    /* width: 50rem; */
+    height: 80px;
+    background-color: hsl(212, 25%, 25%);
+    border: none;
+    margin-top: 40px;
+    border-radius: 10px;
+
 
 }
 @media screen and (max-width: 428px) {
     .header{
         display: flex;
     }
+    hr{
+        /* color: blue; */
+        height: 50px;
+        margin-top: 15px;
+
+    }
     #one{
         font-size: 40px;
+        cursor: pointer;
+    }
+    #one:hover{
+        color: black;
     }
     #last{
         font-size: 40px;
+        cursor: pointer;
 
+    }
+    #last:hover{
+        color: black;
     }
     h3{
         font-size: 35px;
         font-weight: 400;
     }
+    .score{
+        display: flex;
+        width: 370px;
+        /* background-color: yellowgreen; */
+        border-radius: 10px;
+
+    }
+    .art ,
+    .general-knowledge, 
+    .science{
+        width: 370px;
+        border-radius: 10px;
+    }
+    
 }
