@@ -142,14 +142,14 @@ section{
 
     }
     #one{
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
     }
     #one:hover{
         color: black;
     }
     #last{
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
 
     }
@@ -158,7 +158,7 @@ section{
     }
     h3{
         font-size: 35px;
-        font-weight: 400;
+        /* font-weight: 400; */
     }
     .score{
         display: flex;
