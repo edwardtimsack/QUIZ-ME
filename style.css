@@ -146,6 +146,7 @@ section{
     #one{
         font-size: 25px;
         cursor: pointer;
+        padding: 0px;
     }
     #one:hover{
         color: black;
@@ -153,6 +154,7 @@ section{
     #last{
         font-size: 25px;
         cursor: pointer;
+        padding: 0px;
 
     }
     #last:hover{
