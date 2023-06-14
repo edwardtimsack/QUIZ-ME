@@ -47,13 +47,11 @@ h3{
 }
 .score{
     background-color: rgb(236, 121, 54);
-    /* width: 92rem; */
+    width: 50rem;
     height: 80px;
     margin-top: 40px;
-    align-content: center;
-    margin-left: 30px;
-    margin-right: 30px;
-
+    margin-left: 350px;
+    margin-right: auto;
     display: flex;
     border-radius: 10px;
     overflow-x: hidden;
@@ -62,27 +60,20 @@ h3{
     /* border-right: 5px solid white; */
     width: 50rem;
     height: 80px;
-    /* background-color: violet; */
     border: none;
 }
 hr{
     color: white;
     font-size: 30px;
     border-right: 3px solid white;
-    /* width: 10px; */
     height: 50px;
     margin-top: 15px;
 }
 .right{
-    /* border-left: 3px solid white; */
     width: 50rem;
     height: 80px;
-    /* background-color: rgb(50, 7, 241); */
 }
 section{
-    /* background-color: cadetblue; */
-    /* width: 92rem; */
-    /* display: block; */
     margin-left: 30px;
     margin-right: 30px;
 
@@ -91,40 +82,85 @@ section{
     
 }
 .art{
-    /* width: 50rem; */
+    width: 50rem;
     height: 80px;
     background-color: hsl(212, 25%, 25%);
     border: none;
     border-radius: 10px;
     overflow-x: hidden;
+    display: flex;
+    margin-left: 320px;
+    justify-content: space-around;
 
 }
+ #logo{
+    font-size: 50px;
+    padding-left: 60px;
+    margin-top: 10px;
+    color: rgb(236, 121, 54);
+    
+} 
+#text{
+    font-size: 30px;
+    margin-top: 15px;
+
+} 
 .general-knowledge{
-    /* width: 50rem; */
+    width: 50rem;
     height: 80px;
     background-color: hsl(212, 25%, 25%);
     border: none;
     margin-top: 40px;
     border-radius: 10px;
     overflow-x: hidden;
+    margin-left: 320px;
+    display: flex;
+}
+.general-knowledge #logo{
+    padding-left: 10px;
+    margin-left: 150px;
+}
+.general-knowledge #text{
+    margin-left: 210px;
 
 }
-.science{
-    /* width: 50rem; */
+.music{
+    width: 50rem;
     height: 80px;
     background-color: hsl(212, 25%, 25%);
     border: none;
     margin-top: 40px;
     border-radius: 10px;
-
+    margin-left: 320px;
+    display: flex;
+}
+.music #logo{
+    padding-left: 10px;
+    margin-left: 150px;
+}
+.music #text{
+    margin-left: 210px;
 
 }
 .technology{
+    width: 50rem;
     height: 80px;
     background-color: hsl(212, 25%, 25%);
     border: none;
     margin-top: 40px;
     border-radius: 10px;
+    margin-left: 320px;
+    display: flex;
+
+}
+.technology #logo{
+    padding-left: 10px;
+    margin-left: 150px;
+}
+.technology #text{
+    margin-left: 210px;
+    /* font-size: 80px; */
+
 }
 @media screen and (max-width: 360px) {
     body{
@@ -132,13 +168,14 @@ section{
     }
     .header{
         display: flex;
-        /* justify-content: space-between; */
         justify-content: space-around;
         overflow-x: hidden;
-        /* background-color: red; */
+    }
+    section{
+        display: block;
+        margin-left: 0px;
     }
     hr{
-        /* color: blue; */
         height: 50px;
         margin-top: 15px;
 
@@ -169,17 +206,93 @@ section{
         width: 300px;
         /* background-color: yellowgreen; */
         border-radius: 10px;
+        margin-left: 30px;
 
     }
-    .art ,
-    .general-knowledge, 
-    .science,
-    .technology
-    {
+    .art{
+        display: flex;
         width: 300px;
-        /* width: 370px; */
+        margin-left: 30px;
         border-radius: 10px;
-        overflow-x: hidden;
+
     }
-    
+    .art #logo{
+        padding-left: 0px;
+        font-size: 30px;
+        margin-top: 20px;
+        /* color: green; */
+
+    }
+    .art #text{
+        font-size: 20px;
+        margin-top: 20px;
+
+    }
+    .general-knowledge{
+        display: flex;
+        width: 300px;
+        margin-left: 30px;
+    }
+    .general-knowledge #logo{
+        padding-left: 0px;
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 20px;
+        /* color: green; */
+    }
+    .general-knowledge #text{
+        margin-left: 50px;
+        font-size: 20px;
+        margin-top: 20px;
+
+    }
+    .music{
+        display: flex;
+        width: 300px;
+        margin-left: 30px;
+        /* background-color: tomato; */
+    }
+    .music  #logo{
+        font-size: 30px;
+        padding-left: 0px;
+        margin-left: 30px;
+        /* color: green; */
+        margin-top: 20px;
+
+    }
+  
+    .music #text{
+        margin-right: 0px;
+        font-size: 20px;
+        margin-top: 20px;
+        /* color: green; */
+        margin-left: 90px;
+
+    }
+
+    .technology{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        width: 300px;
+        margin-left: 30px;
+    }
+ 
+
+    .technology #logo{
+        padding-left: 0px;
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-right: 0px; 
+
+    }
+    .technology #text{
+        margin-left: 60px;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-right: 60px;
+        /* background-color: turquoise; */
+
+    }
 }
