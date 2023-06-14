@@ -10,6 +10,13 @@ body{
     font-family: "Poppins";
     background-color: hsl(240, 100%, 5%);
 }
+.main{
+    /* background-color: slateblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-direction: column;
+}
 .header{
     /* background-color: brown; */
     height: 100px;
@@ -50,8 +57,8 @@ h3{
     width: 50rem;
     height: 80px;
     margin-top: 40px;
-    margin-left: 350px;
-    margin-right: auto;
+    /* margin-left: 350px; */
+    /* margin-right: auto; */
     display: flex;
     border-radius: 10px;
     overflow-x: hidden;
@@ -89,7 +96,8 @@ section{
     border-radius: 10px;
     overflow-x: hidden;
     display: flex;
-    margin-left: 320px;
+    margin-top: 20px;
+    /* margin-left: 320px; */
     justify-content: space-around;
 
 }
@@ -113,7 +121,7 @@ section{
     margin-top: 40px;
     border-radius: 10px;
     overflow-x: hidden;
-    margin-left: 320px;
+    /* margin-left: 320px; */
     display: flex;
 }
 .general-knowledge #logo{
@@ -131,7 +139,7 @@ section{
     border: none;
     margin-top: 40px;
     border-radius: 10px;
-    margin-left: 320px;
+    /* margin-left: 320px; */
     display: flex;
 }
 .music #logo{
@@ -149,7 +157,7 @@ section{
     border: none;
     margin-top: 40px;
     border-radius: 10px;
-    margin-left: 320px;
+    /* margin-left: 320px; */
     display: flex;
 
 }
