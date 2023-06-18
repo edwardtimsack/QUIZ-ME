@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="first">
+                <i class="ri-ubuntu-line" id="logo"></i>
+                <span id="text">Ubuntu</span>
+            </div>
+            <div class="last">
+                <i class="ri-arrow-go-back-line" id="log"></i>
+                <!-- <i class="ri-close-line" id="log"></i> -->
+            </div>
+        </header>
+        <button id="startButton">Start Timer</button>
+
+        <span class="notify">
+            <h1 id="quest">
+                Question: 1
+            </h1>
+            <h1 id="timer">
+                05:00 min
+            </h1>
+        </span>
+        <hr>
+        <p id="para">Which space agency has decided to carry out fist all-female spacewalk at the International Space Station?</p>
+        <form>
+            <div class="option">
+                <h1>A</h1>
+                <!-- <input type="radio" id="A" name="multipleChoice">  -->
+                <label for="a"><span>Roscosmos</span></label>
+            </div>
+            <div class="option" id="two">
+                <h1>B</h1>
+                <label for="b"><span>NASA</span></label>
+            </div>
+            <div class="option" id="three">
+                <h1>C</h1>
+                <label for="c"><span>ISRO</span></label>
+            </div>
+            <div class="option" id="four">
+                <h1>D</h1>
+                <label for="d"><span>JAXA</span></label>
+            </div>
+            <section class="buttons">
+                <button id="first">Exit</button>
+                <button id="sec" type="submit">Next</button>
+            </section>
+            <!-- <p id="timer">0 seconds</p> -->
+        </form>
+    </div>
+    
+    <script src="questions.js"></script>
+</body>
+</html>

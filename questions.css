@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins";
+    background-color: hsl(240, 100%, 5%);
+}
+.wrapper{
+    width: 100%;
+    height: 400px;
+    color: white
+}
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(212, 25%, 25%);
+    padding: 1.0em;
+    box-shadow: 0px 0px 4px  hsl(212, 25%, 25%);
+}
+.header #logo{
+    font-size: 40px;
+    color: white;
+    color: orangered;
+}
+.header #logo:hover{
+    color: red;
+    cursor: pointer;
+    
+}
+.header #text{
+    font-size: 40px;
+    color: white;
+    color: orangered;
+
+}
+.header #log{
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.header #log:hover{
+    color: red;
+
+}
+.notify{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 1.0em;
+    color: white;
+    padding: 6px 16px 6px 16px;
+
+}
+#timer{
+    color: red;
+}
+hr{
+    margin: 10px 17px 0px 17px;
+
+}
+#para{
+    margin-top: 30px;
+    padding: 1.0em;
+}
+form{
+    
+    padding: 1.0em;
+    cursor: pointer;
+}
+.option{
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 6px 2px 6px 6px;
+    display: flex;
+}
+.option:hover{
+    background-color: orangered;
+}
+.option label{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.option h1{
+    background-color: orangered;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 0px 0px 0px 8px;
+}
+#two , #three , #four{
+    margin-top: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 1.0em;
+}
+button{
+    border: none;
+    width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
