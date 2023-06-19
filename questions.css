@@ -115,3 +115,25 @@ button{
     font-size: 15px;
     cursor: pointer;
 }
+@media(max-width: 600px) {
+    body{
+        background-color: rgb(107, 105, 105);
+    }
+    .first{
+        display: flex;
+    }
+    .last #log{
+        margin-top: 20px;
+    }
+    .notify{
+        display: flex;
+    }
+    .notify #quest{
+        font-size: 20px;
+    }
+    .notify #timer{
+        font-size: 20px;
+
+    }
+    
+}

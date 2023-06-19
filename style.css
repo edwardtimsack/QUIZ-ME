@@ -100,5 +100,10 @@ body{
 .js:hover{
     background-color: hsl(20, 21%, 41%);
 }
+@media(max-width: 600px) {
+    body{
+        background-color: red;
+    }
+}
 
 /* edwardtimsack.github.io/QUIZ-ME/ */
