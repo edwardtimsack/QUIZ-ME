@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html_Questions_Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/questions.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="first">
+                <!-- <i class="ri-ubuntu-line" id="logo"></i> -->
+                <span id="text">Course Name</span>
+            </div>
+            <div class="last">
+                <i class="ri-arrow-go-back-line" id="log"></i>
+                <!-- <i class="ri-close-line" id="log"></i> -->
+            </div>
+        </header>
+        <button id="startButton">Start Timer</button>
+
+        <span class="notify">
+            <h1 id="quest">
+                Question
+            </h1>
+            <h1 id="timer">
+                05:00 min
+            </h1>
+        </span>
+        <hr>
+
+        <div class="app__question-container">
+            <div class="question">
+              <h3 class="question-title"></h3>
+              <div class="question__options-container">
+                <!-- <label class="question__options-item" for="question-option"
+                  ><input name="question-option" value="href" type="radio" />a.
+                  href</label
+                ><br />
+                <label class="question__options-item" for="question-option"
+                  ><input name="question-option" value="src" type="radio" />b.
+                  src</label
+                ><br />
+                <label class="question__options-item" for="question-option"
+                  ><input name="question-option" value="class" type="radio" />c.
+                  class</label
+                ><br />
+                <label class="question__options-item" for="question-option"
+                  ><input name="question-option" value="style" type="radio" />d.
+                  style</label
+                > -->
+              </div>
+            </div>
+    
+            <div class="app-btns">
+              <button id="previous-btn" onclick="previousQuestion()">Previous</button>
+              <button id="next-btn" onclick="nextQuestion()">Next</button>
+            </div>
+          </div>
+          
+    </div>
+    
+    <script src="./Scripts/htmlQuestion.js"></script>
+</body>
+</html>  
+ 
+

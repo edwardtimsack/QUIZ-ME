@@ -52,11 +52,13 @@ body{
     color: white;
 }
 .main{
-    /* background-color: gold; */
+ /* background-color: gold;  */
     width: 100%;
     height: 40em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+
+   
 }
 #logo{
     margin-right: 30px;

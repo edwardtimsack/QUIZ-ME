@@ -22,16 +22,7 @@ body{
     padding: 1.0em;
     box-shadow: 0px 0px 4px  hsl(212, 25%, 25%);
 }
-.header #logo{
-    font-size: 40px;
-    color: white;
-    color: orangered;
-}
-.header #logo:hover{
-    color: red;
-    cursor: pointer;
-    
-}
+
 .header #text{
     font-size: 40px;
     color: white;
@@ -65,43 +56,46 @@ hr{
     margin: 10px 17px 0px 17px;
 
 }
-#para{
-    margin-top: 30px;
-    padding: 1.0em;
-}
-form{
-    
-    padding: 1.0em;
-    cursor: pointer;
-}
-.option{
-    background-color: white;
-    color: black;
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-    padding: 6px 2px 6px 6px;
-    display: flex;
-}
-.option:hover{
-    background-color: orangered;
-}
-.option label{
-    margin-left: 10px;
-    margin-top: 5px;
-}
-.option h1{
-    background-color: orangered;
-    color: white;
-    border-radius: 20px;
-    height: 30px;
-    width: 30px;
+
+.app__question-container {
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .question__options-container {
+    padding: 5px;
+    margin-top: 20px;
+  }
+
+  .question__options-item {
+    font-size: 18px;
+    color: hsl(212, 15%, 53%);
+  }
+.question-title{
+    padding-left: 15px;
     font-size: 20px;
-    padding: 0px 0px 0px 8px;
+
 }
-#two , #three , #four{
-    margin-top: 10px;
-}
+  .question__options-item input[type="radio"] {
+    padding: 0px;
+    border: 0px;
+    width: 50px;
+    height: 30px;
+
+    vertical-align: middle;
+  }
+  .app-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .app-btns button {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+  }
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -116,11 +110,11 @@ button{
     cursor: pointer;
 }
 @media(max-width: 600px) {
-    body{
-        /* background-color: rgb(107, 105, 105); */
-    }
     .first{
         display: flex;
+    }
+    .header #text{
+        font-size: 30px;
     }
     .last #log{
         margin-top: 20px;
