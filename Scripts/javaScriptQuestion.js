@@ -68,14 +68,14 @@ let jsQuestions = [
       correctAnswer: "Not a Number"
     },
     {
-      question: "",
-      answers: ["", "", "", ""],
-      correctAnswer: ""
+      question: "What does the 'this' keyword refer to in JavaScript?",
+      answers: ["It refers to the current function being executed.", " It refers to the global object.", "It refers to the object that owns the executing code.", "It refers to the previous object in the scope chain."],
+      correctAnswer: "It refers to the object that owns the executing code."
     },
     {
-      question: "",
-      answers: ["", "", "", ""],
-      correctAnswer: ""
+      question: "Which built-in method can be used to convert a string to uppercase in JavaScript?",
+      answers: ["toLowerCase()", "convertToLower()", "toUpperCase()", "makeLowerCase()"],
+      correctAnswer: "toUpperCase()"
     }
   ]
 
