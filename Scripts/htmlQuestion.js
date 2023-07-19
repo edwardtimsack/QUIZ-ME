@@ -6,6 +6,8 @@ let nextBtn = document.querySelector("#next");
 let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
 let scoreTiming = document.querySelector('#quest');
+let tracker = document.querySelector('#track');
+
 let questionTitleElement = document.querySelector(".question-title");
 let optionsContainerElement = document.querySelector(
   ".question__options-container"
@@ -82,6 +84,7 @@ scoreTiming.innerHTML = "Score: 0"
 let userSelectedAnswer = {};
 
 let questionCount = 0;
+tracker.textContent = `Question : ${questionCount + 1} / ${htmlQuestions.length}`
 
 let questionDetail = htmlQuestions[questionCount];
 
@@ -135,6 +138,7 @@ console.log(selectedAnswer);
     questionDetail = htmlQuestions[questionCount];
     displayQuestion();
   }
+  tracker.textContent = `Question : ${questionCount + 1} / ${htmlQuestions.length}`;
 
   return;
 }
@@ -181,6 +185,7 @@ function previousQuestion() {
     questionDetail = htmlQuestions[questionCount];
     displayQuestion();
   }
+  tracker.textContent = `Question : ${questionCount + 1} / ${htmlQuestions.length}`;
   
   return;
 }

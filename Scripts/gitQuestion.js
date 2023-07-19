@@ -6,6 +6,7 @@ let nextBtn = document.querySelector("#next");
 let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
 let scoreTiming = document.querySelector('#quest');
+let tracker = document.querySelector('#track');
 
 
 coursesName.textContent = "GIT QUESTIONS";
@@ -77,9 +78,12 @@ let gitQuestions = [
     }
 ]
 let score = 0;
+scoreTiming.innerHTML = "Score: 0"
+
 let userSelectedAnswer = {};
 
 let questionCount = 0;
+tracker.textContent = `Question : ${questionCount + 1} / ${gitQuestions.length}`
 
 let questionDetail = gitQuestions[questionCount];
 
@@ -133,6 +137,7 @@ console.log(selectedAnswer);
     questionDetail = gitQuestions[questionCount];
     displayQuestion();
   }
+  tracker.textContent = `Question : ${questionCount + 1} / ${gitQuestions.length}`;
 
   return;
 }
@@ -179,6 +184,7 @@ function previousQuestion() {
     questionDetail = gitQuestions[questionCount];
     displayQuestion();
   }
+  tracker.textContent = `Question : ${questionCount + 1} / ${gitQuestions.length}`;
   
   return;
 }

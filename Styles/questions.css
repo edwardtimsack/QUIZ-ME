@@ -85,6 +85,10 @@ hr{
 
     vertical-align: middle;
   }
+  .mid{
+    width: 20px;
+    height: 40px;
+  }
   
   .app-btns {
     display: flex;
