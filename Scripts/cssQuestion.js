@@ -16,7 +16,7 @@ let optionsContainerElement = document.querySelector(
 );
 
 exitBtn.addEventListener('click', function(){
-  window.location.href = 'home.html';
+  window.location.href = 'index.html';
   console.log("hello")
 })
 // questionTitleElement.textContent = "HEllo " +"tIM";
