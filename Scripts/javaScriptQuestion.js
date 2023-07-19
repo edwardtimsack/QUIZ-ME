@@ -3,8 +3,9 @@ let timerElement = document.querySelector('#timer');
 let questions = document.querySelector("#para");
 let form = document.querySelector("form");
 let nextBtn = document.querySelector("#next");
-let exitBtn = document.querySelector("#exit");
+let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
+let scoreTiming = document.querySelector('#quest');
 
 coursesName.textContent = "JAVASCRIPT QUESTIONS";
 
@@ -13,6 +14,10 @@ let optionsContainerElement = document.querySelector(
   ".question__options-container"
 );
 
+exitBtn.addEventListener('click', function(){
+  window.location.href = 'home.html';
+  console.log("hello")
+})
 // questionTitleElement.textContent = "HEllo " +"tIM";
 // closed.forEach( function(closed) {
 //     closed.addEventListener('click', function() {
@@ -50,6 +55,9 @@ let jsQuestions = [
   ]
 
   let score = 0;
+  scoreTiming.innerHTML = "Score: 0"
+
+let userSelectedAnswer = {};
 
 let questionCount = 0;
 
@@ -80,6 +88,7 @@ function nextQuestion() {
 console.log(selectedAnswer);
     // Compare the selected answer with the correct answer for the current question
     if (selectedAnswer === questionDetail.correctAnswer) {
+
       // Store the user-selected answer and its correctness in the userSelectedAnswer object
       userSelectedAnswer[questionCount] = {
         question: questionDetail.question,
@@ -101,8 +110,8 @@ console.log(selectedAnswer);
   // Clear options
   optionsContainerElement.innerHTML = "";
   questionTitleElement.innerHTML = "";
-  if (gitQuestions.length > questionCount) {
-    questionDetail = gitQuestions[questionCount];
+  if (jsQuestions.length > questionCount) {
+    questionDetail = jsQuestions[questionCount];
     displayQuestion();
   }
 
@@ -124,17 +133,25 @@ function createOption(option) {
     document.createElement("br")
   );
 
-  inputEl.addEventListener('click' , function(event){
-    userSelectedAnswer[questionCount] = {
-      question: questionDetail.text,
-      option
-    } 
-  })
+  inputEl.addEventListener("change", function() {
+    if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
+      labelEl.style.color = 'green';
+      score += 20;
+      scoreTiming.textContent = `Score: ${score}`;
+      
+      console.log(score);
+      
+      console.log("Correct!");
+    } else {
+      labelEl.style.color = 'red';
+      console.log("Wrong!");
+    }
+  });
   optionsContainerElement.appendChild(labelEl);
 }
 
-function nextQuestion() {
-  questionCount += 1;
+function previousQuestion() {
+  questionCount -= 1;
 
   // clear options
   optionsContainerElement.innerHTML = "";
@@ -146,3 +163,29 @@ function nextQuestion() {
   
   return;
 }
+
+function timer() {
+  let startingMinute = 5 *  60;
+
+ let timerVar = setInterval(function() {
+    let minute = Math.floor(startingMinute / 60);
+    let seconds = startingMinute % 60;
+    timerElement.textContent = `${String(minute).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+    if(startingMinute === 0){
+      clearInterval(timerVar);
+    
+    }
+    
+    startingMinute --;
+
+  }, 1000);
+}
+timer()
+
+function displayScore(score) {
+  // scoreTiming.textContent = score;
+  console.log('helo');
+
+}
+
+displayScore(score);

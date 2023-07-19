@@ -3,8 +3,9 @@ let timerElement = document.querySelector('#timer');
 let questions = document.querySelector("#para");
 let form = document.querySelector("form");
 let nextBtn = document.querySelector("#next");
-let exitBtn = document.querySelector("#exit");
+let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
+let scoreTiming = document.querySelector('#quest');
 
 coursesName.textContent = "CSS QUESTIONS";
 
@@ -14,6 +15,10 @@ let optionsContainerElement = document.querySelector(
   ".question__options-container"
 );
 
+exitBtn.addEventListener('click', function(){
+  window.location.href = 'home.html';
+  console.log("hello")
+})
 // questionTitleElement.textContent = "HEllo " +"tIM";
 // closed.forEach( function(closed) {
 //     closed.addEventListener('click', function() {
@@ -51,6 +56,8 @@ let cssQuestions = [
 ]
 
 let score = 0;
+scoreTiming.innerHTML = "Score: 0"
+
 let userSelectedAnswer = {};
 let questionCount = 0;
 
@@ -101,8 +108,8 @@ console.log(selectedAnswer);
   // Clear options
   optionsContainerElement.innerHTML = "";
   questionTitleElement.innerHTML = "";
-  if (gitQuestions.length > questionCount) {
-    questionDetail = gitQuestions[questionCount];
+  if (cssQuestions.length > questionCount) {
+    questionDetail = cssQuestions[questionCount];
     displayQuestion();
   }
 
@@ -127,8 +134,15 @@ function createOption(option) {
   inputEl.addEventListener("change", function() {
     if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
       // score += 1;
+      labelEl.style.color = 'green';
+      score += 20;
+      scoreTiming.textContent = `Score: ${score}`;
+      
+      console.log(score);
+      
       console.log("Correct!");
     } else {
+      labelEl.style.color = 'red';
       console.log("Wrong!");
     }
   });
@@ -141,10 +155,36 @@ function previousQuestion() {
   // clear options
   optionsContainerElement.innerHTML = "";
   questionTitleElement.innerHTML = "";
-  if (questions.length > questionCount) {
+  if (cssQuestions.length > questionCount) {
     questionDetail = questions[questionCount];
     displayQuestion();
   }
   
   return;
 }
+
+function timer() {
+  let startingMinute = 5 *  60;
+
+ let timerVar = setInterval(function() {
+    let minute = Math.floor(startingMinute / 60);
+    let seconds = startingMinute % 60;
+    timerElement.textContent = `${String(minute).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+    if(startingMinute === 0){
+      clearInterval(timerVar);
+    
+    }
+    
+    startingMinute --;
+
+  }, 1000);
+}
+timer()
+
+function displayScore(score) {
+  // scoreTiming.textContent = score;
+  console.log('helo');
+
+}
+
+displayScore(score);

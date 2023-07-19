@@ -7,28 +7,28 @@ let fourCourse = document.querySelectorAll("#fourth");
 
 
 firstCourse.forEach( function(firstCourse) {
-    console.log("hello");
+    // console.log("hello");
     firstCourse.addEventListener('click', function() {
         window.location.href = "gitQuestions.html";
     })
 });
 
 secondCourse.forEach( function(secondCourse) {
-    console.log("hello");
+    // console.log("hello");
     secondCourse.addEventListener('click', function() {
         window.location.href = "htmlQuestions.html";
     })
 });
 
 thirthCourse.forEach( function(thirthCourse) {
-    console.log("hello");
+    // console.log("hello");
     thirthCourse.addEventListener('click', function() {
         window.location.href = "cssQuestions.html";
     })
 });
 
 fourCourse.forEach( function(fourCourse) {
-    console.log("hello");
+    // console.log("hello");
     fourCourse.addEventListener('click', function() {
         window.location.href = "javaScriptQuestions.html";
     })
