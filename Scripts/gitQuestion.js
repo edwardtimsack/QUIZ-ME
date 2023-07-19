@@ -49,6 +49,31 @@ let gitQuestions = [
         question: "How do you discard all local changes in Git and revert to the last committed state?",
         answers: ["git push", "git reset --hard", "git checkout", "git stash"],
         correctAnswer: " git reset --hard"
+    },
+    {
+      question: "What does the command 'git push' do?",
+      answers: ["Downloads changes from a remote repository", "Commits changes to the local repository", "Merges two branches", "Uploads changes to a remote repository"],
+      correctAnswer: "Uploads changes to a remote repository"
+    },
+    {
+      question: "What is the purpose of the command 'git pull'?",
+      answers: ["Pushes local changes to a remote repository", "Fetches and merges changes from a remote repository to the current branch", "Creates a new branch", "Discards all local changes and reverts to the last committed state"],
+      correctAnswer: "Fetches and merges changes from a remote repository to the current branch"
+    },
+    {
+      question: "Which command is used to view the commit history in Git?",
+      answers: ["git log", "git status", "git branch", "git diff"],
+      correctAnswer: "git log"
+    },
+    {
+      question: "What does the command 'git merge' do?",
+      answers: ["Uploads changes to a remote repository", "Creates a new branch", "Discards all local changes and reverts to the last committed state", "Combines changes from a different branch into the current branch"],
+      correctAnswer: "Combines changes from a different branch into the current branch"
+    },
+    {
+      question: "How do you discard uncommitted changes in a specific file in Git?",
+      answers: ["git commit", "git reset", "git checkout", "git revert"],
+      correctAnswer: "git checkout"
     }
 ]
 let score = 0;
@@ -129,7 +154,7 @@ function createOption(option) {
   inputEl.addEventListener("change", function() {
     if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
       labelEl.style.color = 'green';
-      score += 20;
+      score += 10;
       scoreTiming.textContent = `Score: ${score}`;
       
       console.log(score);

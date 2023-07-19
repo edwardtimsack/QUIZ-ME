@@ -52,6 +52,31 @@ let cssQuestions = [
     question: "Which property is used to set the font-family of an element in css?",
     answers: ["font", "font-size", "text-front", "font-family"],
     correctAnswer: "font-family"
+  },
+  {
+    question: "Which CSS property is used to control the spacing between the content and the border of an element?",
+    answers: ["margin", "padding", "border-spacing", "line-height"],
+    correctAnswer: "padding"
+  },
+  {
+    question: "Which CSS selector targets an element based on its class attribute?",
+    answers: ["#", ".", "*", ">"],
+    correctAnswer: "."
+  },
+  {
+    question: "Which CSS property is used to change the background color of an element?",
+    answers: ["color", "background-color", "text-color", "fill-color"],
+    correctAnswer: "background-color"
+  },
+  {
+    question: "Which CSS property is used to control the appearance of text in an element?",
+    answers: ["font-style", "text-decoration", "text-align", "text-transform"],
+    correctAnswer: "text-decoration"
+  },
+  {
+    question: "Which CSS property is used to specify the amount of space between the lines of text in an element?",
+    answers: ["line-height", "word-spacing", "letter-spacing", "text-spacing"],
+    correctAnswer: "line-height"
   }
 ]
 
@@ -135,7 +160,7 @@ function createOption(option) {
     if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
       // score += 1;
       labelEl.style.color = 'green';
-      score += 20;
+      score += 10;
       scoreTiming.textContent = `Score: ${score}`;
       
       console.log(score);

@@ -18,14 +18,6 @@ exitBtn.addEventListener('click', function(){
   console.log("hello")
 });
 
-// questionTitleElement.textContent = "HEllo " +"tIM";
-// closed.forEach( function(closed) {
-//     closed.addEventListener('click', function() {
-//         window.location.href = "home.html";
-//     })
-// })
-
-// HTML Questions 
 let htmlQuestions = [
   {
     question: "What is the meaning of this acronym HTML?",
@@ -165,7 +157,7 @@ function createOption(option) {
   inputEl.addEventListener("change", function() {
     if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
       labelEl.style.color = 'green';
-      score += 20;
+      score += 10;
       scoreTiming.textContent = `Score: ${score}`;
       
       console.log(score);

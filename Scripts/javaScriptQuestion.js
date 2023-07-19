@@ -51,6 +51,31 @@ let jsQuestions = [
         question: "What will be the result of the following expression: 5 + '5' ?",
         answers: ["10", "55", "5 + '5'", "'5' + 5"],
         correctAnswer: "55"
+    },
+    {
+      question: "Which of the following is NOT a data type in JavaScript?",
+      answers: ["String", "Number", "Boolean", "Array"],
+      correctAnswer: "Array"
+    },
+    {
+      question: "What does the 'this' keyword refer to in JavaScript?",
+      answers: ["It refers to the current function being executed", "It refers to the global object", "It refers to the previous object in the scope chain", "It refers to the object that owns the executing code"],
+      correctAnswer: "It refers to the previous object in the scope chain"
+    },
+    {
+      question: "What does the 'NaN' value represent in JavaScript?",
+      answers: ["Not a Number", "Null", "Undefined", "Infinity"],
+      correctAnswer: "Not a Number"
+    },
+    {
+      question: "",
+      answers: ["", "", "", ""],
+      correctAnswer: ""
+    },
+    {
+      question: "",
+      answers: ["", "", "", ""],
+      correctAnswer: ""
     }
   ]
 
@@ -136,7 +161,7 @@ function createOption(option) {
   inputEl.addEventListener("change", function() {
     if (inputEl.checked && inputEl.value === questionDetail.correctAnswer) {
       labelEl.style.color = 'green';
-      score += 20;
+      score += 10;
       scoreTiming.textContent = `Score: ${score}`;
       
       console.log(score);
