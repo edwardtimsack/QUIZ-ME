@@ -6,7 +6,7 @@ let nextBtn = document.querySelector("#next");
 let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
 let scoreTiming = document.querySelector('#quest');
-
+let tracker = document.querySelector('#track');
 coursesName.textContent = "JAVASCRIPT QUESTIONS";
 
 let questionTitleElement = document.querySelector(".question-title");
@@ -85,6 +85,7 @@ let jsQuestions = [
 let userSelectedAnswer = {};
 
 let questionCount = 0;
+tracker.textContent = `Question : ${questionCount + 1} / ${jsQuestions.length}`
 
 let questionDetail = jsQuestions[questionCount];
 
@@ -139,7 +140,8 @@ console.log(selectedAnswer);
     questionDetail = jsQuestions[questionCount];
     displayQuestion();
   }
-
+  tracker.textContent = `Question : ${questionCount + 1} / ${jsQuestions.length}`;
+  
   return;
 }
 
@@ -185,6 +187,7 @@ function previousQuestion() {
     questionDetail = jsQuestions[questionCount];
     displayQuestion();
   }
+  tracker.textContent = `Question : ${questionCount + 1} / ${jsQuestions.length}`;
   
   return;
 }
