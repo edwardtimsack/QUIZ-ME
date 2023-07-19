@@ -104,6 +104,8 @@ body{
 }
 @media(max-width: 600px) {
     body{
+    background-color: hsl(240, 100%, 5%);
+
         /* background-color: red; */
     }
 }
