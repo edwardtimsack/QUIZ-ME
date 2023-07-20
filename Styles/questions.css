@@ -115,6 +115,9 @@ button{
     font-size: 15px;
     cursor: pointer;
 }
+.container{
+
+}
 @media(max-width: 600px) {
     .first{
         display: flex;

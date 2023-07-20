@@ -1,5 +1,4 @@
 let startButton = document.querySelector('#startButton');
-let timerElement = document.querySelector('#timer');
 let questions = document.querySelector("#para");
 let form = document.querySelector("form");
 let nextBtn = document.querySelector("#next");
@@ -143,6 +142,7 @@ console.log(selectedAnswer);
 }
 
 
+
 function createOption(option) {
   const labelEl = document.createElement("label");
   const inputEl = document.createElement("input");
@@ -162,16 +162,20 @@ function createOption(option) {
       score += 10;
       scoreTiming.textContent = `Score: ${score}`;
       
-      console.log(score);
+      labelEl.style.border = "2px solid green";
+      // labelEl.style.padding = '0.5rem';
+      inputEl.style.backgroundColor = 'green'
       
       console.log("Correct!");
     } else {
+      labelEl.style.border = "2px solid red";
       labelEl.style.color = 'red';
       console.log("Wrong!");
     }
   });
   optionsContainerElement.appendChild(labelEl);
 }
+
 
 
 function previousQuestion() {
@@ -190,7 +194,9 @@ function previousQuestion() {
 }
 
 function timer() {
-  let startingMinute = 5 *  60;
+let timerElement = document.querySelector('#timer');
+
+  let startingMinute = 2 *  60;
 
  let timerVar = setInterval(function() {
     let minute = Math.floor(startingMinute / 60);
@@ -199,6 +205,10 @@ function timer() {
     if(startingMinute === 0){
       clearInterval(timerVar);
     
+    }
+    if(startingMinute === 0) {
+      console.log('hello');
+      timerElement.innerHTML = "Game Over!!"
     }
     
     startingMinute --;

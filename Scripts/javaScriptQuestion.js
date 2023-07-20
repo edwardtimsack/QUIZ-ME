@@ -193,7 +193,7 @@ function previousQuestion() {
 }
 
 function timer() {
-  let startingMinute = 5 *  60;
+  let startingMinute = 2 *  60;
 
  let timerVar = setInterval(function() {
     let minute = Math.floor(startingMinute / 60);
