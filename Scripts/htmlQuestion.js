@@ -1,12 +1,14 @@
-let startButton = document.querySelector('#startButton');
 let timerElement = document.querySelector('#timer');
 let questions = document.querySelector("#para");
 let form = document.querySelector("form");
-let nextBtn = document.querySelector("#next");
 let exitBtn = document.querySelector("#log");
 let coursesName = document.querySelector("#text");
 let scoreTiming = document.querySelector('#quest');
 let tracker = document.querySelector('#track');
+
+let nextBtn = document.querySelector('#next-btn');
+let previousBtn = document.querySelector('#previous-btn');
+
 
 let questionTitleElement = document.querySelector(".question-title");
 let optionsContainerElement = document.querySelector(
@@ -17,7 +19,11 @@ coursesName.textContent = "HTML QUESTIONS";
 
 exitBtn.addEventListener('click', function(){
   window.location.href = 'index.html';
-  console.log("hello")
+  // console.log("hello")
+});
+
+optionsContainerElement.addEventListener('click', function(){
+  console.log("tim");
 });
 
 let htmlQuestions = [
@@ -163,16 +169,23 @@ function createOption(option) {
       labelEl.style.color = 'green';
       score += 10;
       scoreTiming.textContent = `Score: ${score}`;
-      
+      disableOptions();
       console.log(score);
-      
       console.log("Correct!");
     } else {
       labelEl.style.color = 'red';
+      disableOptions();
       console.log("Wrong!");
     }
   });
   optionsContainerElement.appendChild(labelEl);
+}
+
+function disableOptions() {
+  const options = document.querySelectorAll('input[name="question-option"]');
+  for (let i = 0; i < options.length; i++) {
+    options[i].disabled = true;
+  }
 }
 
 function previousQuestion() {
@@ -201,7 +214,12 @@ function timer() {
       clearInterval(timerVar);
     
     }
-    
+    if(startingMinute === 0) {
+      console.log('hello');
+      timerElement.innerHTML = "Game Over!!"
+      clearInterval(timerVar);
+      window.location.href = "score.html"
+    }
     startingMinute --;
 
   }, 1000);
