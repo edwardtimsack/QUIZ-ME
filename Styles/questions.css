@@ -74,7 +74,8 @@ hr{
 .question-title{
     padding-left: 15px;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 400;
+    
 
 }
   .question__options-item input[type="radio"] {
@@ -114,9 +115,67 @@ button{
     padding: 10px;
     font-size: 15px;
     cursor: pointer;
-}
-.container{
+    margin-top: 40px;
 
+}
+.question__options-item input[type="radio"] {
+    /* border: "2px solid green"; */
+    border: 2px solid rgb(128, 0, 111);
+}
+
+
+/* result css */
+
+.medium{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8rem;
+    display: none;
+    /* background-color: red; */
+}
+.medium main{
+    width: 50%;
+    height: 400px;
+    background-color: rgb(195, 201, 207);
+    justify-content: center;
+    border-radius: 10px;
+}
+/* .medium .trophy{
+    background-color: aqua;
+    height: 150px;
+}
+.medium .more{
+    align-items: center;
+}
+.medium h1 , h2, p{
+    text-align: center;
+}
+.medium h1{
+    color: rgb(11, 177, 11);
+    font-size: 35px;
+} */
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#restart{
+    width: 150px;
+    display: none;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+.medium .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.medium button{
+    padding: 0.7rem;
+    margin-top: 30px;
+    cursor: pointer;
 }
 @media(max-width: 600px) {
     .first{
