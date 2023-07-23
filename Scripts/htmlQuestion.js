@@ -39,8 +39,6 @@ optionsContainerElement.addEventListener('click', function(){
     console.log("hellllllooooooooo")
     resultFnx()
   }
-  // console.log(e.target);
-  //  e.target.textContent = "Clicked!";
 });
 
 

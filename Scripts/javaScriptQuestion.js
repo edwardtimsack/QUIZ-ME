@@ -307,15 +307,7 @@ function resultFnx() {
   result.style.justifyContent = 'center';
   result.style.paddingTop = '8rem';
   console.log(score, 'score :');
-  
-  // resultDiv.style.width = '50%';
-  // resultDiv.style.height = '300px';
-  // result.style.backgroundColor = 'hsl(212, 25%, 25%)';
-  // resultDiv.style.justifyContent = 'center';
-  // resultDiv.style.borderRadius = '10px';
-  // background-color: hsl(212, 25%, 25%);
 
-  // timerElement.style.display = 'none';
   exitBtn.style.display = 'none';
   // scoreTiming.style.display = 'none';
   tracker.style.display = 'none';
