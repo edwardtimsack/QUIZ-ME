@@ -32,6 +32,12 @@ exitBtn.addEventListener('click', function(){
   console.log("hello")
 });
 optionsContainerElement.addEventListener('click', function(){
+  console.log('one option clicked');
+
+  if(questionCount === Questions.length-1){
+    console.log("hellllllooooooooo")
+    resultFnx()
+  }
   // console.log(e.target);
   //  e.target.textContent = "Clicked!";
 });
@@ -154,6 +160,8 @@ console.log(selectedAnswer);
     // Disable the Next button if this is the last question
     if (questionCount === Questions.length - 1) {
       nextBtn.disabled = true;
+      // resultFnx()
+
     }
     previousBtn.disabled = false;
   
