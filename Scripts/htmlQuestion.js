@@ -210,6 +210,7 @@ function disableOptions() {
   }
 }
 
+  previousBtn.disabled = true;
 
 function previousQuestion() {
   questionCount -= 1;

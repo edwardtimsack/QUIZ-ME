@@ -38,6 +38,7 @@ optionsContainerElement.addEventListener('click', function(){
     console.log("hellllllooooooooo")
     resultFnx()
   }
+  //  e.target.textContent = "Clicked!";
 });
 
 
@@ -209,6 +210,7 @@ function disableOptions() {
   }
 }
 
+previousBtn.disabled = true;
 
 function previousQuestion() {
   questionCount -= 1;
