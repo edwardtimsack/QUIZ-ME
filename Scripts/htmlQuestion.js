@@ -95,6 +95,10 @@ let Questions = [
   },
   
 ];
+localStorage.setItem('Questions', JSON.stringify(Questions));
+let questionStorage = JSON.parse(localStorage.getItem('Questions'));
+
+
 let score = 0;
 scoreTiming.innerHTML = "Score: 0"
 
@@ -191,13 +195,11 @@ function createOption(option) {
       labelEl.style.color = 'green';
       labelEl.style.border = "2px solid green";
       labelEl.style.padding = '0.3rem';
-      // console.log("Correct!");
     } else {
       labelEl.style.color = 'red';
       labelEl.style.border = "2px solid red";
       labelEl.style.padding = '0.3rem';
       disableOptions();
-      // console.log("Wrong!");
     }
   });
   optionsContainerElement.appendChild(labelEl);
@@ -258,8 +260,6 @@ let timerElement = document.querySelector('#timer');
     
           // Show the medium and hide the whole document
          result.style.display = 'flex';
-          // wholeDocument.style.display = 'none';
-      // window.location.href = "score.html"
       resultFnx()
 
     }
@@ -271,7 +271,6 @@ let timerElement = document.querySelector('#timer');
 timer()
 
 function displayScore(score) {
-  // scoreTiming.textContent = score;
   console.log('helo');
 
 }
@@ -279,7 +278,6 @@ function displayScore(score) {
 displayScore(score);
 
 let scoreUpdate = document.querySelector('#text');
-// let restartBtn = document.querySelector('.btn button');
 let score1 = document.querySelector('h1 span');
 let logo = document.querySelector('.trophy');
 
@@ -291,41 +289,23 @@ function resultFnx() {
   let answerQuest = score / 10;
   let percent = (score);
   let totalQuest = Questions.length;
-  // let restartBtn = document.createElement('button');
-
   let scoreMessage = `You attempted and answerd ${answerQuest} out of ${totalQuest} correctly. ${percent}%`;
-
-
   result.innerHTML = scoreMessage;
+  
+  // styles 
   restart.style.display = 'block'
-
   result.style.color = 'rgb(11, 177, 11)';
-  // result.style.backgroundColor = 'rgb(195, 201, 207)';
   result.style.fontSize = '35px';
   result.style.width = '100%';
   result.style.justifyContent = 'center';
   result.style.paddingTop = '8rem';
   console.log(score, 'score :');
-  
-  // resultDiv.style.width = '50%';
-  // resultDiv.style.height = '300px';
-  // result.style.backgroundColor = 'hsl(212, 25%, 25%)';
-  // resultDiv.style.justifyContent = 'center';
-  // resultDiv.style.borderRadius = '10px';
-  // background-color: hsl(212, 25%, 25%);
-
-  // timerElement.style.display = 'none';
   exitBtn.style.display = 'none';
-  // scoreTiming.style.display = 'none';
   tracker.style.display = 'none';
-  // nextBtn.style.display = 'none';
-  // previousBtn.style.display = 'none';
   last.style.display = 'none';
   notify.style.display = 'none';
   hr.style.display = 'none'
   coursesName.style.display = 'block';
-  // header.style.backgroundColor = 'hsl(212, 25%, 25%)';
-
   questionBox.style.display = 'none';
   wholeDocument.style.height = '0px';
   result.style.display = 'flex';
